@@ -89,6 +89,9 @@ local function getViewModel()
 	return ViewModel, Humanoid -- Returns both
 end
 
+-- Using the getViewModel function because although in this script it seems useless; the viewmodel's name changes. This isn't common practise but it makes sense logically to me in my head so I have this function set
+-- due to different naming
+
 local function playAnimation(animName)
 	local ViewModel, Humanoid = getViewModel() -- Gets viewmodel and humanoid
 	local Animation = ViewModel:WaitForChild("AnimationFolder"):FindFirstChild(animName) -- Finds animation
